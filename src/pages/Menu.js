@@ -33,16 +33,16 @@ const Menu = () => {
     { text: "افزودن پرواز", path: "/add-flight", icon: <AddCircleIcon /> },
     { text: "لیست پروازها", path: "/flights-list", icon: <FlightIcon /> },
     { text: "تغییر ساعت پرواز", path: "/update-flight", icon: <UpdateIcon /> },
-    {
-      text: "پروازهای مقصد خاص",
-      path: "/flights-by-destination",
-      icon: <PlaceIcon />,
-    },
-    {
-      text: "پرواز با بیشترین مسافر",
-      path: "/most-passengers",
-      icon: <PeopleIcon />,
-    },
+    // {
+    //   text: "پروازهای مقصد خاص",
+    //   path: "/flights-by-destination",
+    //   icon: <PlaceIcon />,
+    // },
+    // {
+    //   text: "پرواز با بیشترین مسافر",
+    //   path: "/most-passengers",
+    //   icon: <PeopleIcon />,
+    // },
     { text: "حذف پرواز", path: "/delete-flight", icon: <DeleteIcon /> },
   ];
 

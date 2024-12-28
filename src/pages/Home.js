@@ -1,6 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Box, Grid, Card, CardActionArea, CardContent, Typography } from "@mui/material";
+import {
+  Box,
+  Grid,
+  Card,
+  CardActionArea,
+  CardContent,
+  Typography,
+} from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import FlightIcon from "@mui/icons-material/Flight";
@@ -11,12 +18,28 @@ import DeleteIcon from "@mui/icons-material/Delete";
 
 const menuItems = [
   { text: "صفحه اصلی", path: "/", icon: <HomeIcon fontSize="large" /> },
-  { text: "افزودن پرواز", path: "/add-flight", icon: <AddCircleIcon fontSize="large" /> },
-  { text: "لیست پروازها", path: "/flights-list", icon: <FlightIcon fontSize="large" /> },
-  { text: "تغییر ساعت پرواز", path: "/update-flight", icon: <UpdateIcon fontSize="large" /> },
-  { text: "پروازهای مقصد خاص", path: "/flights-by-destination", icon: <PlaceIcon fontSize="large" /> },
-  { text: "پرواز با بیشترین مسافر", path: "/most-passengers", icon: <PeopleIcon fontSize="large" /> },
-  { text: "حذف پرواز", path: "/delete-flight", icon: <DeleteIcon fontSize="large" /> },
+  {
+    text: "افزودن پرواز",
+    path: "/add-flight",
+    icon: <AddCircleIcon fontSize="large" />,
+  },
+  {
+    text: "لیست پروازها",
+    path: "/flights-list",
+    icon: <FlightIcon fontSize="large" />,
+  },
+  {
+    text: "تغییر ساعت پرواز",
+    path: "/update-flight",
+    icon: <UpdateIcon fontSize="large" />,
+  },
+  // { text: "پروازهای مقصد خاص", path: "/flights-by-destination", icon: <PlaceIcon fontSize="large" /> },
+  // { text: "پرواز با بیشترین مسافر", path: "/most-passengers", icon: <PeopleIcon fontSize="large" /> },
+  {
+    text: "حذف پرواز",
+    path: "/delete-flight",
+    icon: <DeleteIcon fontSize="large" />,
+  },
 ];
 
 const Home = () => {
