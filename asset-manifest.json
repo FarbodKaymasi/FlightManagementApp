@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/FlightManagementApp/static/css/main.02c6b0fb.css",
+    "main.js": "/FlightManagementApp/static/js/main.d29f164f.js",
+    "static/js/488.99e7a755.chunk.js": "/FlightManagementApp/static/js/488.99e7a755.chunk.js",
+    "index.html": "/FlightManagementApp/index.html",
+    "main.02c6b0fb.css.map": "/FlightManagementApp/static/css/main.02c6b0fb.css.map",
+    "main.d29f164f.js.map": "/FlightManagementApp/static/js/main.d29f164f.js.map",
+    "488.99e7a755.chunk.js.map": "/FlightManagementApp/static/js/488.99e7a755.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02c6b0fb.css",
+    "static/js/main.d29f164f.js"
+  ]
+}
