@@ -35,11 +35,11 @@ const App = () => {
           <Route path="/flights-list" element={<FlightsList />} />
           <Route path="/update-flight" element={<UpdateFlight />} />
           <Route
-            path="/flights-by-destination"
+            path="/"
             element={<FlightsByDestination />}
           />
           <Route
-            path="/most-passengers"
+            path="/"
             element={<FlightWithMostPassengers />}
           />
           <Route path="/delete-flight" element={<DeleteFlight />} />
