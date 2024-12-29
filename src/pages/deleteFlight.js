@@ -75,7 +75,12 @@ const FlightsList = () => {
         <Typography
           variant="h3"
           gutterBottom
-          sx={{ fontWeight: "bold", color: "#76c7c0", fontSize: "2.5rem" }}
+          sx={{
+            fontWeight: "bold",
+            color: "#76c7c0",
+            fontSize: "2.5rem",
+            marginBottom: 3,
+          }}
         >
           حذف پرواز
         </Typography>
@@ -86,13 +91,10 @@ const FlightsList = () => {
             variant="outlined"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+            fullWidth
             sx={{
-              width: "100%",
-              backgroundColor: "#2a3b54",
-              borderRadius: "5px",
-              marginBottom: 2,
               "& .MuiOutlinedInput-root": {
-                backgroundColor: "#2a3b54",
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
                 color: "#ffffff",
                 "& fieldset": {
                   borderColor: "#76c7c0",
@@ -104,21 +106,19 @@ const FlightsList = () => {
                   borderColor: "#76c7c0",
                 },
               },
-              "& .MuiInputLabel-root": {
-                color: "#ffffff",
-              },
+              "& .MuiInputLabel-root": { color: "#76c7c0" },
+              marginBottom: 2,
             }}
           />
           <Button
             variant="contained"
-            color="primary"
             onClick={handleSearchClick}
             sx={{
-              padding: "15px",
-              background: "#76c7c0",
-              color: "#ffffff",
-              fontWeight: "bold",
               width: "100%",
+              padding: "12px",
+              fontWeight: "bold",
+              background: "linear-gradient(to right, #76c7c0, #4cafaa)",
+              color: "#ffffff",
               borderRadius: "8px",
               "&:hover": {
                 background: "#5ba99c",
@@ -129,7 +129,16 @@ const FlightsList = () => {
           </Button>
         </Box>
 
-        <Dialog open={openDialog} onClose={() => setOpenDialog(false)}>
+        <Dialog
+          open={openDialog}
+          onClose={() => setOpenDialog(false)}
+          sx={{
+            "& .MuiDialog-paper": {
+              backgroundColor: "#2a3b54",
+              borderRadius: "10px",
+            },
+          }}
+        >
           <DialogTitle sx={{ fontWeight: "bold", color: "#76c7c0" }}>
             آیا مطمئن هستید؟
           </DialogTitle>
@@ -141,26 +150,20 @@ const FlightsList = () => {
           <DialogActions>
             <Button
               onClick={() => setOpenDialog(false)}
-              color="primary"
               sx={{
                 color: "#76c7c0",
                 fontWeight: "bold",
-                "&:hover": {
-                  background: "#2a3b54",
-                },
+                "&:hover": { background: "rgba(255, 255, 255, 0.1)" },
               }}
             >
               لغو
             </Button>
             <Button
               onClick={handleDelete}
-              color="primary"
               sx={{
-                color: "#76c7c0",
+                color: "#f44336",
                 fontWeight: "bold",
-                "&:hover": {
-                  background: "#2a3b54",
-                },
+                "&:hover": { background: "rgba(255, 255, 255, 0.1)" },
               }}
             >
               حذف
@@ -178,20 +181,19 @@ const FlightsList = () => {
             },
           }}
         >
-          <DialogTitle sx={{ color: "#76c7c0" }}>نتیجه ای پیدا نشد</DialogTitle>
+          <DialogTitle sx={{ color: "#76c7c0" }}>نتیجه‌ای پیدا نشد</DialogTitle>
           <DialogContent sx={{ color: "#ffffff" }}>
-            <Typography>هیچ پروازی با این شماره پیدا نشد. دوباره جستجو کنید.</Typography>
+            <Typography>
+              هیچ پروازی با این شماره پیدا نشد. دوباره جستجو کنید.
+            </Typography>
           </DialogContent>
           <DialogActions>
             <Button
               onClick={handleCloseNotFoundDialog}
-              color="primary"
               sx={{
                 color: "#76c7c0",
                 fontWeight: "bold",
-                "&:hover": {
-                  background: "#2a3b54",
-                },
+                "&:hover": { background: "rgba(255, 255, 255, 0.1)" },
               }}
             >
               بستن

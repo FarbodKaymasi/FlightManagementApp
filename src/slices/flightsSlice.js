@@ -17,7 +17,6 @@ const flightsSlice = createSlice({
     updateFlight: (state, action) => {
       const index = state.flights.findIndex(flight => flight.flightNumber === action.payload.flightNumber);
       if (index !== -1) {
-        // Don't change the flight number
         state.flights[index] = { ...state.flights[index], ...action.payload };
       }
     },

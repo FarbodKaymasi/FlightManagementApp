@@ -121,31 +121,46 @@ const FlightsList = () => {
           مدیریت پرواز
         </Typography>
 
-        <TextField
-          label="شماره پرواز"
-          variant="outlined"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          fullWidth
+        <Box
           sx={{
-            mb: 3,
             backgroundColor: "#2a3b54",
-            "& .MuiOutlinedInput-root": { color: "#fff" },
-            "& .MuiInputLabel-root": { color: "#76c7c0" },
-          }}
-        />
-
-        <Button
-          variant="contained"
-          onClick={handleSearchClick}
-          sx={{
-            width: "100%",
-            background: "#76c7c0",
-            "&:hover": { background: "#5ba99c" },
+            padding: 3,
+            borderRadius: 2,
+            boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.1)",
+            mb: 3,
           }}
         >
-          جستجو
-        </Button>
+          <TextField
+            label="شماره پرواز"
+            variant="outlined"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            fullWidth
+            sx={{
+              mb: 2,
+              backgroundColor: "#2a3b54",
+              "& .MuiOutlinedInput-root": { color: "#fff" },
+              "& .MuiInputLabel-root": { color: "#76c7c0" },
+              "& .MuiOutlinedInput-root:hover": {
+                borderColor: "#76c7c0",
+              },
+            }}
+          />
+
+          <Button
+            variant="contained"
+            onClick={handleSearchClick}
+            sx={{
+              width: "100%",
+              background: "#76c7c0",
+              "&:hover": { background: "#5ba99c" },
+              borderRadius: 1,
+              padding: "12px 0",
+            }}
+          >
+            جستجو
+          </Button>
+        </Box>
 
         <Dialog open={openDialog} onClose={() => setOpenDialog(false)}>
           <DialogTitle sx={{ backgroundColor: "#243b55", color: "#fff" }}>

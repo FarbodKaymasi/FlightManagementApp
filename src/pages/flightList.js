@@ -33,7 +33,7 @@ const FlightsList = () => {
       sx={{
         padding: 3,
         background: "linear-gradient(to right, #141e30, #243b55)",
-        minHeight: "100vh",
+        minHeight: "89vh",
         color: "#ffffff",
       }}
     >

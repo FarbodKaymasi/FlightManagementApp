@@ -17,7 +17,7 @@ import PeopleIcon from "@mui/icons-material/People";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 const menuItems = [
-  { text: "صفحه اصلی", path: "/", icon: <HomeIcon fontSize="large" /> },
+  // { text: "صفحه اصلی", path: "/", icon: <HomeIcon fontSize="large" /> },
   {
     text: "افزودن پرواز",
     path: "/add-flight",
@@ -33,8 +33,16 @@ const menuItems = [
     path: "/update-flight",
     icon: <UpdateIcon fontSize="large" />,
   },
-  // { text: "پروازهای مقصد خاص", path: "/flights-by-destination", icon: <PlaceIcon fontSize="large" /> },
-  // { text: "پرواز با بیشترین مسافر", path: "/most-passengers", icon: <PeopleIcon fontSize="large" /> },
+  {
+    text: "پروازهای مقصد خاص",
+    path: "/flights-by-destination",
+    icon: <PlaceIcon fontSize="large" />,
+  },
+  {
+    text: "پرواز با بیشترین مسافر",
+    path: "/most-passengers",
+    icon: <PeopleIcon fontSize="large" />,
+  },
   {
     text: "حذف پرواز",
     path: "/delete-flight",
@@ -50,7 +58,7 @@ const Home = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        minHeight: "89vh",
+        minHeight: "87vh",
         padding: 4,
         backgroundColor: "#f9f9f9",
       }}

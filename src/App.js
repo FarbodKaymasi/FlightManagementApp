@@ -5,8 +5,8 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import { Provider } from "react-redux"; // Import Provider from react-redux
-import store from "./store"; // Import the Redux store
+import { Provider } from "react-redux"; 
+import store from "./store"; 
 import Home from "./pages/Home";
 import AddFlight from "./pages/addFlight";
 import FlightsList from "./pages/flightList";
@@ -23,23 +23,22 @@ const App = () => {
       <Router>
         <Menu />
         <Routes>
-          {/* Redirect from /FlightManagementApp to root */}
+
           <Route
-            path="/FlightManagementApp"
-            element={<Navigate to="/" replace />}
+            path="/"
+            element={<Navigate to="/FlightManagementApp" replace />}
           />
 
-          {/* Other routes */}
-          <Route path="/" element={<Home />} />
+          <Route path="/FlightManagementApp" element={<Home />} />
           <Route path="/add-flight" element={<AddFlight />} />
           <Route path="/flights-list" element={<FlightsList />} />
           <Route path="/update-flight" element={<UpdateFlight />} />
           <Route
-            path="/FlightManagementApp"
+            path="/flights-by-destination"
             element={<FlightsByDestination />}
           />
           <Route
-            path="/FlightManagementApp"
+            path="/most-passengers"
             element={<FlightWithMostPassengers />}
           />
           <Route path="/delete-flight" element={<DeleteFlight />} />
